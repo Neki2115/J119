@@ -1,0 +1,25 @@
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<h1>Dodaj danie</h1>
+
+<% if (typeof errors !== "undefined") { %>
+  <ul class="errors">
+    <% errors.forEach(e => { %>
+      <li><%= e.msg %></li>
+    <% }) %>
+  </ul>
+<% } %>
+
+<form method="POST">
+  <input name="name" placeholder="Nazwa dania">
+  <input name="price" type="number" placeholder="Cena">
+  <input name="category" placeholder="Kategoria">
+  <button class="btn btn-primary">Zapisz</button>
+</form>
+
+<div class="form-nav">
+  <a href="/" class="btn btn-secondary">Home</a>
+  <a href="/dishes" class="btn btn-secondary">Wszystkie dania</a>
+</div>

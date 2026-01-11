@@ -1,0 +1,12 @@
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<h1>Edytuj danie</h1>
+
+<form method="POST" action="/dishes/<%= dish._id %>">
+  <input name="name" value="<%= dish.name %>">
+  <input name="price" value="<%= dish.price %>">
+  <input name="category" value="<%= dish.category %>">
+  <button>Zapisz</button>
+</form>

@@ -1,0 +1,19 @@
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<h1><%= dish.name %></h1>
+<p>Cena: <%= dish.price %> zł</p>
+<p>Kategoria: <%= dish.category %></p>
+
+<a href="/dishes/<%= dish._id %>/edit" class="btn btn-primary">Edytuj</a>
+
+<form method="POST" action="/dishes/<%= dish._id %>/delete" onsubmit="return confirm('Czy na pewno chcesz usunąć to danie?')">
+  <button class="btn btn-primary">Usuń</button>
+</form>
+
+
+<div class="form-nav" style="margin-top:20px;">
+  <a href="/" class="btn btn-secondary">Home</a>
+  <a href="/dishes" class="btn btn-secondary">Wszystkie dania</a>
+</div>

@@ -1,0 +1,28 @@
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<h1>Menu</h1>
+
+<form method="GET">
+  <input name="category" placeholder="Kategoria">
+  <select name="sort">
+    <option value="">Bez sortowania</option>
+    <option value="price">Cena</option>
+    <option value="name">Nazwa</option>
+  </select>
+  <button class="btn btn-primary">Filtruj</button>
+</form>
+
+<ul style="margin-top:20px;">
+  <% dishes.forEach(dish => { %>
+    <li>
+      <a href="/dishes/<%= dish._id %>"><%= dish.name %></a> - <%= dish.price %> zł
+    </li>
+  <% }) %>
+</ul>
+
+<div class="form-nav" style="margin-top:20px;">
+  <a href="/" class="btn btn-secondary">Home</a>
+  <a href="/dishes/new" class="btn btn-secondary">Dodaj nowe danie</a>
+</div>
